@@ -1,0 +1,19 @@
+.container {
+  /* display: grid; */
+  text-align: center;
+  max-width: 400px;
+}
+
+.text {
+  font-family: system-ui;
+  font-weight: 400;
+  font-size: inherit;
+}
+
+.btn-container {
+  margin-top: 10px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}

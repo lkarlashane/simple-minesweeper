@@ -1,0 +1,28 @@
+.cells {
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  text-align: center;
+  margin: auto;
+}
+
+.cell {
+  display: flex;
+  width: calc(25% - 10px);
+  height: 50px;
+  border: 1px solid black;
+  margin: 3px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.safe {
+  background-color: green;
+}
+
+.bomb {
+  background-color: red;
+}

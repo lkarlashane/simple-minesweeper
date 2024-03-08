@@ -1,0 +1,13 @@
+body {
+  font-family: system-ui;
+  font-weight: 400;
+  font-size: inherit;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
