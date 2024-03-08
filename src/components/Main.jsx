@@ -47,6 +47,7 @@ export default function Main() {
         value={board}
         className="text"
         onChange={(e) => setBoard(e.target.value)}
+        readOnly={score} //readonly when in game
       />
 
       <Board
