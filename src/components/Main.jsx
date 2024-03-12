@@ -1,22 +1,20 @@
-import { useState } from "react";
+import { useAppContext } from "../app-context/AppContextProvider";
 import Board from "./Board";
 import "./Main.css";
 
 export default function Main() {
-  const [reset, setReset] = useState(false);
-  const [showReset, setShowReset] = useState(false);
-  const [gameOver, setGameOver] = useState(false);
-  const [score, setScore] = useState(0);
-  const [highScore, setHighScore] = useState(0);
-  const [board, setBoard] = useState(12);
-  const [cell, setCell] = useState([
-    {
-      id: 0,
-      isRevealed: false,
-      isSafe: true,
-      isBomb: false,
-    },
-  ]);
+  const {
+    setReset,
+    showReset,
+    setShowReset,
+    setGameOver,
+    score,
+    setScore,
+    highScore,
+    board,
+    setBoard,
+    setCell,
+  } = useAppContext();
 
   function onShowBoard() {
     setCell((cell) =>
@@ -50,22 +48,7 @@ export default function Main() {
         readOnly={score} //readonly when in game
       />
 
-      <Board
-        board={board}
-        setBoard={setBoard}
-        cell={cell}
-        setCell={setCell}
-        score={score}
-        setScore={setScore}
-        highScore={highScore}
-        setHighScore={setHighScore}
-        reset={reset}
-        setReset={setReset}
-        showReset={showReset}
-        setShowReset={setShowReset}
-        gameOver={gameOver}
-        setGameOver={setGameOver}
-      />
+      <Board />
 
       <div className="btn-container">
         {showReset && (

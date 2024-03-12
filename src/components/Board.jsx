@@ -1,22 +1,11 @@
 import { useEffect } from "react";
 import Cells from "./Cells";
 import "./Board.css";
+import { useAppContext } from "../app-context/AppContextProvider";
 
-export default function Board({
-  board,
-  cell,
-  setCell,
-  score,
-  setScore,
-  highScore,
-  setHighScore,
-  reset,
-  setReset,
-  showReset,
-  setShowReset,
-  gameOver,
-  setGameOver,
-}) {
+export default function Board() {
+  const { reset, setReset, board, setCell } = useAppContext();
+
   function generateBoard() {
     const newBoard = Array(Number(board)).fill("Safe");
 
@@ -50,20 +39,7 @@ export default function Board({
 
   return (
     <div className="board">
-      <Cells
-        cell={cell}
-        setCell={setCell}
-        score={score}
-        setScore={setScore}
-        highScore={highScore}
-        setHighScore={setHighScore}
-        reset={reset}
-        setReset={setReset}
-        showReset={showReset}
-        setShowReset={setShowReset}
-        gameOver={gameOver}
-        setGameOver={setGameOver}
-      />
+      <Cells />
     </div>
   );
 }

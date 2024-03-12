@@ -1,17 +1,18 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
+import { useAppContext } from "../app-context/AppContextProvider";
 import "./Cells.css";
-export default function Cells({
-  cell,
-  setCell,
-  score,
-  setScore,
-  highScore,
-  setHighScore,
-  setShowReset,
-  gameOver,
-  setGameOver,
-}) {
+
+export default function Cells() {
+  const {
+    cell,
+    setCell,
+    score,
+    setScore,
+    highScore,
+    setHighScore,
+    setShowReset,
+    gameOver,
+    setGameOver,
+  } = useAppContext();
   const elements = [];
 
   function onRevealCell(e, i) {
